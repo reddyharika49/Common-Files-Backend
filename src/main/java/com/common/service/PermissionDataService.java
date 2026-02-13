@@ -88,7 +88,7 @@ public class PermissionDataService {
 
         Map<String, Object> finalPermissions = new HashMap<>();
         List<String> redisKeys = roleNames.stream()
-                .map(name -> "role::" + name)
+                .map(name -> "role_v2::" + name)
                 .collect(Collectors.toList());
 
         // 1. ATTEMPT CACHE RETRIEVAL
@@ -100,15 +100,13 @@ public class PermissionDataService {
             Object cachedData = (cachedResults != null) ? cachedResults.get(i) : null;
 
             if (cachedData != null) {
-                // log.info("CACHE HIT for role: {}", roleName);
                 log.info("CACHE HIT for role: {}", roleName);
-                log.info("Redis Data for role {}: {}", roleName, cachedData);
+                // log.info("Redis Data for role {}: {}", roleName, cachedData);
                 finalPermissions.put(roleName, cachedData);
                 // Sliding expiration
-                redisTemplate.expire("role::" + roleName, STABLE_EXPIRATION);
+                redisTemplate.expire("role_v2::" + roleName, STABLE_EXPIRATION);
                 log.info("Refreshed expiration for role: {} to 3 mins", roleName);
             } else {
-                // log.info("CACHE MISS for role: {}", roleName);
                 log.info("CACHE MISS for role: {}", roleName);
                 missedRoleNames.add(roleName);
             }
@@ -121,52 +119,72 @@ public class PermissionDataService {
                     missedRoleNames);
             log.info("DB returned {} records", dbResults.size());
 
-            // SYNC STEP: Populate the finalPermissions map FIRST.
-            // This guarantees the CURRENT user gets all data even if Redis is slow.
+            // SYNC STEP: Aggregate permissions by Role Name first to avoid overwriting
+            // Use Map<ScreenName, Dto> to DEDUPLICATE screens
+            Map<String, Map<String, PermissionOutputDto>> aggregatedPermissions = new HashMap<>();
+
             dbResults.forEach(view -> {
                 String roleName = view.getRoleName();
                 try {
+                    String rawJson = view.getScreenPermission();
+                    if (rawJson != null) {
+                        log.info("Processed DB Data chunk for role: {}, UserRoleId: {}, JSON Length: {}", roleName,
+                                view.getId().getUserRoleId(), rawJson.length());
+                    }
+
                     List<FullPermissionDto> permissionsWithUrl = objectMapper.readValue(
-                            view.getScreenPermission(),
+                            rawJson,
                             new TypeReference<List<FullPermissionDto>>() {
                             });
 
-                    // TRANSFORM & SANITIZE: Remove extra spaces and strip the URL
+                    // TRANSFORM & SANITIZE
                     List<PermissionOutputDto> cleanOutput = permissionsWithUrl.stream()
                             .filter(p -> p.getScreenName() != null)
                             .map(p -> new PermissionOutputDto(
-                                    p.getScreenName().trim(), // FIX: Removes the large white-spaces
+                                    p.getScreenName().trim(),
                                     p.getPermissionName()))
                             .collect(Collectors.toList());
 
-                    finalPermissions.put(roleName, cleanOutput);
-                    log.info("DB Data for role {}: {}", roleName, cleanOutput);
+                    // Merge into Map to Remove Duplicates
+                    aggregatedPermissions.computeIfAbsent(roleName, k -> new HashMap<>());
+                    Map<String, PermissionOutputDto> roleScreens = aggregatedPermissions.get(roleName);
+
+                    cleanOutput.forEach(dto -> {
+                        roleScreens.put(dto.getScreenName(), dto);
+                    });
 
                 } catch (JsonProcessingException e) {
-                    log.error("Failed to parse DB JSON for role: {}", roleName, e);
                     log.error("Failed to parse DB JSON for role: {}", roleName, e);
                 }
             });
 
-            // ASYNC PIPELINE: Background update to Redis.
-            // We do NOT put data in finalPermissions here anymore.
+            // Add aggregated results to final map (Convert back to List)
+            aggregatedPermissions.forEach((role, screenMap) -> {
+                List<PermissionOutputDto> uniqueSortedList = new ArrayList<>(screenMap.values());
+                // Sort for consistent debugging
+                uniqueSortedList.sort((p1, p2) -> p1.getScreenName().compareTo(p2.getScreenName()));
+
+                finalPermissions.put(role, uniqueSortedList);
+            });
+
+            // ASYNC PIPELINE: Background update to Redis with AGGREGATED data
             redisTemplate.executePipelined(new SessionCallback<Object>() {
                 @SuppressWarnings("unchecked")
                 @Override
                 public <K, V> Object execute(RedisOperations<K, V> operations) throws DataAccessException {
-                    dbResults.forEach(view -> {
-                        String roleName = view.getRoleName();
-                        String redisKey = "role::" + roleName;
+                    aggregatedPermissions.forEach((roleName, screenMap) -> {
+                        String redisKey = "role_v2::" + roleName;
+                        List<PermissionOutputDto> uniqueList = new ArrayList<>(screenMap.values());
+                        // Sort for consistent debugging
+                        uniqueList.sort((p1, p2) -> p1.getScreenName().compareTo(p2.getScreenName()));
 
-                        // Only cache if we successfully processed it in the previous step
-                        if (finalPermissions.containsKey(roleName)) {
-                            log.info("CACHE POPULATING (Pipeline) for role: {}", roleName);
-                            operations.opsForValue().set(
-                                    (K) redisKey,
-                                    (V) finalPermissions.get(roleName),
-                                    STABLE_EXPIRATION);
-                            log.info("Stored in Redis: {} with 3 min expiration", redisKey);
-                        }
+                        log.info("CACHE POPULATING (Pipeline) for role: {}, Total Unique Screens: {}", roleName,
+                                uniqueList.size());
+                        operations.opsForValue().set(
+                                (K) redisKey,
+                                (V) uniqueList,
+                                STABLE_EXPIRATION);
+                        log.info("Stored in Redis: {} with 3 min expiration", redisKey);
                     });
                     return null;
                 }
