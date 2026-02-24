@@ -13,6 +13,7 @@ import com.common.entity.AcademicYear;
 import com.common.entity.City;
 import com.common.repository.AcademicYearRepository;
 import com.common.repository.BloodGroupRepository;
+import com.common.repository.CampusOrganizationRepository;
 import com.common.repository.CasteRepository;
 import com.common.repository.CityRepository;
 import com.common.repository.DistrictRepository;
@@ -60,6 +61,8 @@ public class CommonServiceMethods {
 	MandalRepository mandalRepo;
 	@Autowired
 	PinCodeRepository pinCodeRepo;
+	@Autowired
+	CampusOrganizationRepository cmpsOrgRepo;
 
 	final int ACTIVE_STATUS = 1;
     @Cacheable(value = "religions")
@@ -145,4 +148,18 @@ public class CommonServiceMethods {
 		final int ACTIVE_STATUS = 1;
 		return cityRepo.findByDistrictStateStateIdAndStatus(stateId, ACTIVE_STATUS);
 	}
+	
+	@Cacheable(value = "organizationByCampus", key = "#campusId")
+		public List<GenericDropdownDTO> getOrganizationByCampus(int campusId) {
+			return cmpsOrgRepo.findByCampusCampusIdAndIsActive(campusId, 1).stream()
+					.map(cmpsOrg -> new GenericDropdownDTO(cmpsOrg.getOrginization().getOrganizationId(),
+							cmpsOrg.getOrginization().getOrganizationName()))
+					.collect(Collectors.toList());
+		}
+    public List<GenericDropdownDTO> getCitiesByDistrict(int districtId){
+        return cityRepo.findByDistrictDistrictIdAndStatus(districtId, 1).stream().map(
+                city -> new GenericDropdownDTO(city.getCityId(), city.getCityName()))
+                .collect(Collectors.toList());
+    }
+ 
 }
