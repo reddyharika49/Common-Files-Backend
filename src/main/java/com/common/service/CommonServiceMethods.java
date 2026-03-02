@@ -252,5 +252,16 @@ public class CommonServiceMethods {
  
         return new ArrayList<>(campusSet);
     }
+    public List<GenericDropdownDTO> getCampusesByZone(int zoneId) {
+        return campusRepo.findByZoneZoneIdAndIsActive(zoneId, ACTIVE_STATUS).stream()
+                .map(campus -> new GenericDropdownDTO(campus.getCampusId(), campus.getCampusName()))
+                .collect(Collectors.toList());
+    }
+ 
+    public List<GenericDropdownDTO> getZonesByCity(int cityId) {
+        return zoneRepo.findByCityCityId(cityId).stream()
+                .map(zone -> new GenericDropdownDTO(zone.getZoneId(), zone.getZoneName()))
+                .collect(Collectors.toList());
+    }
  
 }

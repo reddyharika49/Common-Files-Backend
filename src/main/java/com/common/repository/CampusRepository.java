@@ -1,8 +1,11 @@
 package com.common.repository;
  
+import java.util.Collection;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.common.dto.GenericDropdownDTO;
 import com.common.entity.Campus;
  
 @Repository
@@ -20,5 +23,7 @@ public interface CampusRepository extends JpaRepository<Campus, Integer> {
  
     // For non-admin: all linked campus IDs (no filter)
     List<Campus> findByCampusIdIn(List<Integer> campusIds);
+
+	    List<Campus> findByZoneZoneIdAndIsActive(int zoneId, int isActive);
 }
  
