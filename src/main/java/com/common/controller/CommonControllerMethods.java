@@ -129,4 +129,14 @@ public class CommonControllerMethods {
             @RequestParam(required = false) String category) {
         return ResponseEntity.ok(commonServiceMethods.getCampusesByEmployee(empId, category));
     }
+    @GetMapping("/campuses/zone/{zoneId}")
+    public ResponseEntity<List<GenericDropdownDTO>> getCampusesByZone(@PathVariable int zoneId) {
+        return ResponseEntity.ok(commonServiceMethods.getCampusesByZone(zoneId));
+    }
+ 
+    @GetMapping("/zones/city/{cityId}")
+    public ResponseEntity<List<GenericDropdownDTO>> getZonesByCity(@PathVariable int cityId) {
+        return ResponseEntity.ok(commonServiceMethods.getZonesByCity(cityId));
+    }
+ 
 }
