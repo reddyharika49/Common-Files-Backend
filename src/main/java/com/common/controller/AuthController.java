@@ -20,7 +20,7 @@ import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/common/auth")
-@CrossOrigin("*")
+@CrossOrigin(originPatterns = "*", allowCredentials = "false")
 @RequiredArgsConstructor
 public class AuthController {
 
