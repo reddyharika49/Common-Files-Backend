@@ -1,0 +1,564 @@
+2026-03-04 00:03:13 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:03:13 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:03:13 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 00:03:13 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 00:03:14 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 00:03:14 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 00:03:15 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 00:03:15 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 00:03:15 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:03:15 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:03:15 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:03:16 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:32:49 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:32:49 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:32:49 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:32:49 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:32:50 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:33:45 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:33:45 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:33:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:39:30 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:39:31 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:39:31 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:40:19 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:40:19 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:40:19 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:40:20 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:40:20 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:40:20 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:40:21 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:40:21 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 00:44:31 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 00:44:32 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 01:23:33 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:40:25 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:40:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:40:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:40:58 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:40:59 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:40:59 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:40:59 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:40:59 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:40:59 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 09:52:49 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:13:09 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:13:37 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:23:02 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:32:20 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:43:30 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 10:55:35 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:22:13 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:22:13 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:22:13 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 11:22:13 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:22:14 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:27:48 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:27:49 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:27:49 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:44:50 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:44:50 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:44:50 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:44:50 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:44:51 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:44:55 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:45:34 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:45:34 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:45:34 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:45:35 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 11:47:06 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:25:39 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:26:04 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:33:31 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:33:31 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:33:31 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 12:33:31 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:33:32 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 12:47:32 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 13:12:45 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 13:12:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:20:58 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:55:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 14:58:01 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 15:45:17 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 15:45:17 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 15:45:17 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 15:45:17 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 15:45:18 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 15:50:12 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:24:46 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:24:46 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:24:46 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:24:46 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:24:47 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:28:54 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 17:33:58 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 18:19:40 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 18:19:41 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 18:19:41 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 18:19:41 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 18:19:41 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 19:47:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 19:47:44 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 19:47:44 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 19:47:44 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 19:47:44 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 19:47:44 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:06:29 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:06:29 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:06:29 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 20:06:29 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 20:06:30 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 20:06:30 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:06:33 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:08:58 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:08:58 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:08:59 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:11:01 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:13:40 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:13:41 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:13:41 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:14:42 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:14:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:19:08 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:19:08 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:19:08 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 20:19:08 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:19:10 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:19:11 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:19:11 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 20:27:03 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:27:04 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:27:28 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 20:56:48 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 21:00:55 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - CACHE POPULATING (Pipeline) for role: ADMIN, Total Unique Screens: 185
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - Stored in Redis: role_v2::ADMIN with 3 min expiration
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:10:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:10:34 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 21:10:34 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 21:11:17 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:11:17 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:11:17 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 21:11:18 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 21:11:18 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 21:11:18 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 21:11:18 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 21:11:18 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:01:41 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:01:41 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:01:42 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:01:43 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:03:13 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:03:13 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:03:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:03:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:03:49 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:03:49 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:03:49 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:03:49 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:12:13 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:12:13 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:12:33 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:12:33 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:13:31 INFO  c.c.service.PermissionDataService - CACHE MISS for role: ADMIN
+2026-03-04 22:13:31 INFO  c.c.service.PermissionDataService - Fetching from DB for roles: [ADMIN]
+2026-03-04 22:14:11 INFO  c.c.service.PermissionDataService - DB returned 1 records
+2026-03-04 22:14:11 INFO  c.c.service.PermissionDataService - Processed DB Data chunk for role: ADMIN, UserRoleId: 939, JSON Length: 22208
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - >>> Permission Check Initiated <<<
+2026-03-04 22:14:47 INFO  c.c.service.PermissionDataService - User: Mohan, Designations: [CENTER HEAD], Roles: [ADMIN]
+2026-03-04 22:14:48 INFO  c.c.service.PermissionDataService - CACHE HIT for role: ADMIN
+2026-03-04 22:14:48 INFO  c.c.service.PermissionDataService - Refreshed expiration for role: ADMIN to 3 mins

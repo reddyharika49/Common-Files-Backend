@@ -263,5 +263,30 @@ public class CommonServiceMethods {
                 .map(zone -> new GenericDropdownDTO(zone.getZoneId(), zone.getZoneName()))
                 .collect(Collectors.toList());
     }
+
+    public Long getEmployeePhoneNumber(String identifier) {
+        com.common.entity.Employee emp = null;
+ 
+        if (identifier != null && !identifier.isBlank()) {
+            try {
+                Integer empId = Integer.parseInt(identifier);
+                emp = employeeRepo.findById(empId).orElse(null);
+            } catch (NumberFormatException e) {
+                // Not an integer, skip empId check
+            }
+ 
+            if (emp == null) {
+                emp = employeeRepo.findByPayrollId(identifier).orElse(null);
+            }
+        }
+ 
+        if (emp != null) {
+            if (emp.getPrimaryMobileNo() != null) {
+                return emp.getPrimaryMobileNo();
+            }
+            return emp.getSecondaryMobileNo();
+        }
+        return null;
+    }
  
 }
