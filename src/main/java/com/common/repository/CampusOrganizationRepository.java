@@ -11,5 +11,7 @@ import com.common.entity.CampusOrganization;
 public interface CampusOrganizationRepository extends JpaRepository<CampusOrganization, Integer> {
  
 	List<CampusOrganization> findByCampusCampusIdAndIsActive(Integer campusId, Integer isActive);
+	
+	List<CampusOrganization> findByOrganizationOrganizationIdAndIsActive(Integer organizationId, Integer isActive);
  
 }
