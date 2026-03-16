@@ -138,5 +138,21 @@ public class CommonControllerMethods {
     public ResponseEntity<List<GenericDropdownDTO>> getZonesByCity(@PathVariable int cityId) {
         return ResponseEntity.ok(commonServiceMethods.getZonesByCity(cityId));
     }
+    
+    @GetMapping("/employee/phone")
+    public ResponseEntity<?> getEmployeePhoneNumber(
+            @RequestParam String identifier) {
+        Long phoneNumber = commonServiceMethods.getEmployeePhoneNumber(identifier);
+        if (phoneNumber != null) {
+            return ResponseEntity.ok(phoneNumber);
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee or phone number not found");
+    }
+    
+    @GetMapping("/campusByOrganizations/{orgId}")
+    public ResponseEntity<List<GenericDropdownDTO>> getCampusByOrganizations(@PathVariable Integer orgId){
+    	return ResponseEntity.ok(commonServiceMethods.getCampusByOrganization(orgId));
+    	}
+
  
 }
