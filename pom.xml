@@ -106,11 +106,7 @@
 			<version>${bouncycastle.version}</version>
 		</dependency>
          
-		<dependency>
-			<groupId>com.vladmihalcea</groupId>
-			<artifactId>hibernate-types-60</artifactId>
-			<version>${hibernate-types.version}</version>
-		</dependency>
+	
 		<dependency>
 			<groupId>io.hypersistence</groupId>
 			<artifactId>hypersistence-utils-hibernate-63</artifactId>
@@ -184,4 +180,5 @@
 		</dependencies>
 	</dependencyManagement>
 </project>
+ 
  

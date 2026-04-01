@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
+import com.common.dto.CampusLocationDTO;
 import com.common.entity.AcademicYear;
+import com.common.entity.Campus;
 import com.common.entity.CampusEmployee;
 import com.common.entity.City;
 import com.common.repository.AcademicYearRepository;
@@ -295,6 +297,23 @@ public class CommonServiceMethods {
                 .map(cmpsOrg -> new GenericDropdownDTO(cmpsOrg.getCampus().getCampusId(),
                         cmpsOrg.getCampus().getCampusName()))
                 .collect(Collectors.toList());
+    }
+
+    public CampusLocationDTO getLocationByCampusId(int campusId) {
+        Campus campus = campusRepo.findById(campusId)
+                .orElseThrow(() -> new RuntimeException("Campus not found with id: " + campusId));
+
+        CampusLocationDTO dto = new CampusLocationDTO();
+        if (campus.getZone() != null) {
+            dto.setZoneId(campus.getZone().getZoneId());
+            dto.setZoneName(campus.getZone().getZoneName());
+
+            if (campus.getZone().getCity() != null) {
+                dto.setCityId(campus.getZone().getCity().getCityId());
+                dto.setCityName(campus.getZone().getCity().getCityName());
+            }
+        }
+        return dto;
     }
 
 }

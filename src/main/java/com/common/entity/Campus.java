@@ -53,11 +53,26 @@ public class Campus {
  
     @Column(name = "is_active")
     private Integer isActive;
+   
+   
+    @Column(name="cmps_status")
+    private Integer cmpsStatus;
+   
+    @Column(name ="fusion_cmps_code")
+    private String fusionCmpsCode;
+   
+    @Column(name ="fusion_cmps_name")
+    private String fusionCmpsName;
+   
+    @Column(name = "orc_code")
+    private String orcCode;
+   
+    @Column(name ="year_of_established")
+    private Integer yearOfEstablished;
+   
+    @Column(name="is_ground_available")
+    private Integer isGroundAvailable;
+   
+    @Column(name ="isFarmsAvailable")
+    private Integer isFarmsAvailable;
 }
- 
- 
- 
- 
- 
-
- 
