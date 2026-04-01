@@ -16,6 +16,7 @@ import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
 import com.common.dto.CampusLocationDTO;
+import com.common.dto.EmployeeDetailsDTO;
 import com.common.entity.AcademicYear;
 import com.common.entity.City;
 import com.common.service.CommonServiceMethods;
@@ -160,5 +161,11 @@ public class CommonControllerMethods {
         return ResponseEntity.ok(commonServiceMethods.getLocationByCampusId(campusId));
     }
 
+    @GetMapping("/employees/dept/{departmentId}")
+    public ResponseEntity<List<EmployeeDetailsDTO>> getEmployeesByDeptAndDesig(
+            @PathVariable Integer departmentId,
+            @RequestParam(required = false) Integer designationId) {
+        return ResponseEntity.ok(commonServiceMethods.getEmployeesByDeptAndDesig(departmentId, designationId));
+    }
  
 }

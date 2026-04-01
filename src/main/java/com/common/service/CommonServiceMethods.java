@@ -14,6 +14,7 @@ import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
 import com.common.dto.CampusLocationDTO;
+import com.common.dto.EmployeeDetailsDTO;
 import com.common.entity.AcademicYear;
 import com.common.entity.Campus;
 import com.common.entity.CampusEmployee;
@@ -314,6 +315,24 @@ public class CommonServiceMethods {
             }
         }
         return dto;
+    }
+
+    public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId) {
+        List<com.common.entity.Employee> employees;
+        if (designationId != null) {
+            employees = employeeRepo.findByDepartmentDepartmentIdAndDesignationDesignationIdAndIsActive(departmentId,
+                    designationId, 1);
+        } else {
+            employees = employeeRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, 1);
+        }
+
+        return employees.stream().map(emp -> new EmployeeDetailsDTO(
+                emp.getEmpId(),
+                emp.getFirstName() + " " + emp.getLastName(),
+                emp.getDesignation() != null ? emp.getDesignation().getDesignationId() : null,
+                emp.getDesignation() != null ? emp.getDesignation().getDesignationName() : null,
+                emp.getPrimaryMobileNo(),
+                emp.getEmail())).collect(Collectors.toList());
     }
 
 }
