@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
+import com.common.dto.CampusLocationDTO;
 import com.common.entity.AcademicYear;
 import com.common.entity.City;
 import com.common.service.CommonServiceMethods;
@@ -153,6 +154,11 @@ public class CommonControllerMethods {
     public ResponseEntity<List<GenericDropdownDTO>> getCampusByOrganizations(@PathVariable Integer orgId){
     	return ResponseEntity.ok(commonServiceMethods.getCampusByOrganization(orgId));
     	}
+
+    @GetMapping("/campus/zoneDetails/{campusId}")
+    public ResponseEntity<CampusLocationDTO> getCampusLocation(@PathVariable int campusId) {
+        return ResponseEntity.ok(commonServiceMethods.getLocationByCampusId(campusId));
+    }
 
  
 }
