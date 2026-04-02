@@ -33,3 +33,8 @@ build/
 .vscode/
 
 logs/
+
+### Temp build output files ###
+build.log
+build_out.txt
+compile_log.txt

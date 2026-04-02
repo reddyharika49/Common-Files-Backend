@@ -15,6 +15,11 @@ import com.common.dto.EmployeeDetailsDTO;
 import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
+//<<<<<<< HEAD
+//=======
+import com.common.dto.CampusLocationDTO;
+import com.common.dto.EmployeeDetailsDTO;
+//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
 import com.common.entity.AcademicYear;
 import com.common.entity.Campus;
 import com.common.entity.CampusEmployee;
@@ -309,7 +314,11 @@ public class CommonServiceMethods {
         }
         return dto;
     }
- 
+//<<<<<<< HEAD
+// 
+//=======
+//
+//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
     public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId) {
         List<com.common.entity.Employee> employees;
         if (designationId != null) {
@@ -318,7 +327,11 @@ public class CommonServiceMethods {
         } else {
             employees = employeeRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, 1);
         }
- 
+//<<<<<<< HEAD
+// 
+//=======
+//
+//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
         return employees.stream().map(emp -> new EmployeeDetailsDTO(
                 emp.getEmpId(),
                 emp.getFirstName() + " " + emp.getLastName(),
@@ -327,5 +340,9 @@ public class CommonServiceMethods {
                 emp.getPrimaryMobileNo(),
                 emp.getEmail())).collect(Collectors.toList());
     }
- 
+//<<<<<<< HEAD
+// 
+//=======
+//
+//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
 }

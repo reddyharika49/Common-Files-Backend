@@ -161,7 +161,6 @@ public class CommonControllerMethods {
     public ResponseEntity<CampusLocationDTO> getCampusLocation(@PathVariable int campusId) {
         return ResponseEntity.ok(commonServiceMethods.getLocationByCampusId(campusId));
     }
- 
     @GetMapping("/employees/dept/{departmentId}")
     public ResponseEntity<List<EmployeeDetailsDTO>> getEmployeesByDeptAndDesig(
             @PathVariable Integer departmentId,
