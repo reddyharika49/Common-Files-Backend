@@ -16,6 +16,7 @@ import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
 import com.common.dto.CampusLocationDTO;
+import com.common.dto.EmployeeDetailsDTO;
 import com.common.entity.AcademicYear;
 import com.common.entity.City;
 import com.common.service.CommonServiceMethods;
@@ -127,8 +128,9 @@ public class CommonControllerMethods {
     @GetMapping("/employee/campuses/{empId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCampusesByEmployee(
             @PathVariable int empId,
-            @RequestParam(required = false) String category) {
-        return ResponseEntity.ok(commonServiceMethods.getCampusesByEmployee(empId, category));
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) Integer cityId) {
+        return ResponseEntity.ok(commonServiceMethods.getCampusesByEmployee(empId, category, cityId));
     }
     @GetMapping("/campuses/zone/{zoneId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCampusesByZone(@PathVariable int zoneId) {
@@ -139,7 +141,7 @@ public class CommonControllerMethods {
     public ResponseEntity<List<GenericDropdownDTO>> getZonesByCity(@PathVariable int cityId) {
         return ResponseEntity.ok(commonServiceMethods.getZonesByCity(cityId));
     }
-    
+   
     @GetMapping("/employee/phone")
     public ResponseEntity<?> getEmployeePhoneNumber(
             @RequestParam String identifier) {
@@ -149,16 +151,22 @@ public class CommonControllerMethods {
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee or phone number not found");
     }
-    
+   
     @GetMapping("/campusByOrganizations/{orgId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCampusByOrganizations(@PathVariable Integer orgId){
-    	return ResponseEntity.ok(commonServiceMethods.getCampusByOrganization(orgId));
-    	}
-
+        return ResponseEntity.ok(commonServiceMethods.getCampusByOrganization(orgId));
+        }
+ 
     @GetMapping("/campus/zoneDetails/{campusId}")
     public ResponseEntity<CampusLocationDTO> getCampusLocation(@PathVariable int campusId) {
         return ResponseEntity.ok(commonServiceMethods.getLocationByCampusId(campusId));
     }
-
+ 
+    @GetMapping("/employees/dept/{departmentId}")
+    public ResponseEntity<List<EmployeeDetailsDTO>> getEmployeesByDeptAndDesig(
+            @PathVariable Integer departmentId,
+            @RequestParam(required = false) Integer designationId) {
+        return ResponseEntity.ok(commonServiceMethods.getEmployeesByDeptAndDesig(departmentId, designationId));
+    }
  
 }
