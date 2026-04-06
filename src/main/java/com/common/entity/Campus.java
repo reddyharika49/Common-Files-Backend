@@ -68,11 +68,6 @@ public class Campus {
     @JoinColumn(name = "zone_id")
     private Zone zone;
 
-    // ── Business Type ─────────────────────────────────────────────────────────
-    @Column(name = "business_id", insertable = false, updatable = false)
-    private Integer businessId;
-
-    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "business_id")
     private BusinessType businessType;
