@@ -319,7 +319,6 @@ public class CommonServiceMethods {
         return dto;
     }
 
-
     public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId) {
         List<com.common.entity.Employee> employees;
         if (designationId != null) {
@@ -338,6 +337,7 @@ public class CommonServiceMethods {
                 emp.getPrimaryMobileNo(),
                 emp.getEmail())).collect(Collectors.toList());
     }
+
     @Cacheable(value = "allDepartments")
     public List<GenericDropdownDTO> getAllDepartments() {
         return empDeptRepo.findByIsActive(ACTIVE_STATUS).stream()
@@ -349,6 +349,47 @@ public class CommonServiceMethods {
     public List<GenericDropdownDTO> getDesignationsByDepartment(Integer departmentId) {
         return empDesigRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, ACTIVE_STATUS).stream()
                 .map(desig -> new GenericDropdownDTO(desig.getDesignationId(), desig.getDesignationName()))
+                .collect(Collectors.toList());
+    }
+
+    public List<GenericDropdownDTO> getCitiesByEmployee(int empId, String category) {
+
+        String busTypeName = (category != null && !category.isBlank()) ? category : null;
+
+        // Admin check — if admin, return all active cities
+        boolean isAdmin = employeeViewRepo.findAllByEmpId(empId).stream()
+                .anyMatch(ev -> ev.getRoleName() != null && ev.getRoleName().toLowerCase().contains("admin"));
+
+        if (isAdmin) {
+            return cityRepo.findByStatus(ACTIVE_STATUS).stream()
+                    .map(city -> new GenericDropdownDTO(city.getCityId(), city.getCityName()))
+                    .collect(Collectors.toList());
+        }
+
+        // Non-admin: collect campus IDs linked to this employee
+        List<Integer> linkedCampusIds = new ArrayList<>();
+
+        employeeRepo.findById(empId).ifPresent(emp -> {
+            if (emp.getCampus() != null && emp.getCampus().getCampusId() != null) {
+                linkedCampusIds.add(emp.getCampus().getCampusId());
+            }
+        });
+
+        campusEmployeeRepo.findByEmployeeEmpIdAndIsActive(empId, 1).forEach(ce -> {
+            if (ce.getCampus() != null && ce.getCampus().getCampusId() != null) {
+                linkedCampusIds.add(ce.getCampus().getCampusId());
+            }
+        });
+
+        if (linkedCampusIds.isEmpty()) {
+            return new ArrayList<>();
+        }
+
+        // From linked campuses (filtered by category), extract unique cities
+        return campusRepo.findLinkedCampuses(linkedCampusIds, busTypeName, null).stream()
+                .filter(c -> c.getCity() != null)
+                .map(c -> new GenericDropdownDTO(c.getCity().getCityId(), c.getCity().getCityName()))
+                .distinct()
                 .collect(Collectors.toList());
     }
 }
