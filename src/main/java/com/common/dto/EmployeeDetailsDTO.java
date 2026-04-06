@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class EmployeeDetailsDTO {
     private Integer empId;
     private String name;
+    private String payrollId;
     private Integer designationId;
     private String designationName;
     private Long mobileNo;

@@ -1,5 +1,5 @@
 package com.common.service;
- 
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -42,10 +42,10 @@ import com.common.repository.ReligionRepository;
 import com.common.repository.StateRepository;
 import com.common.repository.StudentClassRepository;
 import com.common.repository.ZoneRepository;
- 
+
 @Service
 public class CommonServiceMethods {
- 
+
     @Autowired
     ReligionRepository religionRepo;
     // @Autowired
@@ -84,16 +84,16 @@ public class CommonServiceMethods {
     CampusEmployeeRepository campusEmployeeRepo;
     @Autowired
     CampusRepository campusRepo;
- 
+
     final int ACTIVE_STATUS = 1;
- 
+
     @Cacheable(value = "religions")
     public List<GenericDropdownDTO> getAllReligions() {
         return religionRepo.findAll().stream()
                 .map(r -> new GenericDropdownDTO(r.getReligion_id(), r.getReligion_type()))
                 .collect(Collectors.toList());
     }
- 
+
     //
     // public List<GenericDropdownDTO> getAllOrganizations() {
     // return organizationRepo.findAll().stream().map(org -> new
@@ -105,13 +105,13 @@ public class CommonServiceMethods {
         return genderRepo.findAll().stream().map(g -> new GenericDropdownDTO(g.getGender_id(), g.getGenderName()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "castes")
     public List<GenericDropdownDTO> getAllCastes() {
         return casteRepo.findAll().stream().map(c -> new GenericDropdownDTO(c.getCaste_id(), c.getCaste_type()))
                 .collect(Collectors.toList());
     }
- 
+
     // public List<GenericDropdownDTO> getAllEmployees() {
     // List<Employee> activeEmployees = employeeRepo.findByIsActive(1);
     //
@@ -126,66 +126,66 @@ public class CommonServiceMethods {
                 .map(studentClass -> new GenericDropdownDTO(studentClass.getClassId(), studentClass.getClassName()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "AllPaymentModes")
     public List<GenericDropdownDTO> getAllPaymentModes() {
         return paymentModeRepo.findAll().stream()
                 .map(mode -> new GenericDropdownDTO(mode.getPayment_mode_id(), mode.getPayment_type()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "BloodGroupTypes")
     public List<GenericDropdownDTO> getAllBloodGroups() {
         return bloodGroupRepo.findAll().stream()
                 .map(group -> new GenericDropdownDTO(group.getBloodGroupId(), group.getBloodGroupName()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "allZones")
     public List<GenericDropdownDTO> getAllZones() {
         return zoneRepo.findAllActiveZonesForDropdown();
     }
- 
+
     @Cacheable(value = "allstates")
     public List<GenericDropdownDTO> getAllStates() {
         return stateRepo.findByStatus(1).stream().map(s -> new GenericDropdownDTO(s.getStateId(), s.getStateName()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "academicYears")
     public List<AcademicYear> getAllAcademicYears() {
         return academicYearRepo.findAll();
     }
- 
+
     @Cacheable(value = "AllMandals")
     public List<GenericDropdownDTO> getAllMandals() {
         return mandalRepo.findAll().stream().map(g -> new GenericDropdownDTO(g.getMandal_id(), g.getMandal_name()))
                 .collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "districts")
     public List<GenericDropdownDTO> getAllDistricts() {
         return districtRepo.findByStatus(1).stream()
                 .map(d -> new GenericDropdownDTO(d.getDistrictId(), d.getDistrictName())).collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "cities")
     public List<GenericDropdownDTO> getAllCities() {
         return cityRepo.findByStatus(ACTIVE_STATUS).stream()
                 .map(city -> new GenericDropdownDTO(city.getCityId(), city.getCityName())).collect(Collectors.toList());
     }
- 
+
     @Cacheable(value = "pinCode", key = "#pinCode")
     public PinCodeLocationDTO getLocationByPinCode(int pinCode) {
         return pinCodeRepo.findStateAndDistrictByPinCode(pinCode)
                 .orElseThrow(() -> new RuntimeException("No data found for pin code: " + pinCode));
     }
- 
+
     public List<City> getCitiesByState(int stateId) {
         final int ACTIVE_STATUS = 1;
         return cityRepo.findByDistrictStateStateIdAndStatus(stateId, ACTIVE_STATUS);
     }
- 
+
     @Cacheable(value = "organizationByCampus", key = "#campusId")
     public List<GenericDropdownDTO> getOrganizationByCampus(int campusId) {
         return cmpsOrgRepo.findByCampusCampusIdAndIsActive(campusId, 1).stream()
@@ -193,13 +193,13 @@ public class CommonServiceMethods {
                         cmpsOrg.getOrganization().getOrganizationName()))
                 .collect(Collectors.toList());
     }
- 
+
     public List<GenericDropdownDTO> getCitiesByDistrict(int districtId) {
         return cityRepo.findByDistrictDistrictIdAndStatus(districtId, 1).stream().map(
                 city -> new GenericDropdownDTO(city.getCityId(), city.getCityName()))
                 .collect(Collectors.toList());
     }
- 
+
     public List<EmployeePayrollDto> getEmployeesByCampus(int campusId) {
         return employeeRepo.findByCampusCampusId(campusId).stream()
                 .map(emp -> new EmployeePayrollDto(
@@ -208,14 +208,15 @@ public class CommonServiceMethods {
                         emp.getPayrollId()))
                 .collect(Collectors.toList());
     }
- 
+
     public List<GenericDropdownDTO> getCampusesByEmployee(int empId, String category, Integer cityId) {
         Set<GenericDropdownDTO> campusSet = new HashSet<>();
- 
+
         // Normalize category to null if blank
         String busTypeName = (category != null && !category.isBlank()) ? category : null;
- 
-        // 1. If user has an Admin role, filter all campuses by businessType (category) and cityId
+
+        // 1. If user has an Admin role, filter all campuses by businessType (category)
+        // and cityId
         boolean isAdmin = employeeViewRepo.findAllByEmpId(empId).stream()
                 .anyMatch(ev -> ev.getRoleName() != null && ev.getRoleName().toLowerCase().contains("admin"));
         if (isAdmin) {
@@ -224,24 +225,25 @@ public class CommonServiceMethods {
                 campusSet.add(new GenericDropdownDTO(c.getCampusId(), c.getCampusName()));
             }
         }
- 
+
         // 2 & 3. Collect linked campus IDs from Employee and CampusEmployee
         List<Integer> linkedCampusIds = new ArrayList<>();
- 
+
         employeeRepo.findById(empId).ifPresent(emp -> {
             if (emp.getCampus() != null && emp.getCampus().getCampusId() != null) {
                 linkedCampusIds.add(emp.getCampus().getCampusId());
             }
         });
- 
+
         List<CampusEmployee> campusRoles = campusEmployeeRepo.findByEmployeeEmpIdAndIsActive(empId, 1);
         for (CampusEmployee ce : campusRoles) {
             if (ce.getCampus() != null && ce.getCampus().getCampusId() != null) {
                 linkedCampusIds.add(ce.getCampus().getCampusId());
             }
         }
- 
-        // Query the linked campuses, filtered by businessType (category) and cityId if provided
+
+        // Query the linked campuses, filtered by businessType (category) and cityId if
+        // provided
         if (!linkedCampusIds.isEmpty()) {
             List<com.common.entity.Campus> linkedCampuses = campusRepo.findLinkedCampuses(linkedCampusIds, busTypeName,
                     cityId);
@@ -249,25 +251,25 @@ public class CommonServiceMethods {
                 campusSet.add(new GenericDropdownDTO(c.getCampusId(), c.getCampusName()));
             }
         }
- 
+
         return new ArrayList<>(campusSet);
     }
- 
+
     public List<GenericDropdownDTO> getCampusesByZone(int zoneId) {
         return campusRepo.findByZoneZoneIdAndIsActive(zoneId, ACTIVE_STATUS).stream()
                 .map(campus -> new GenericDropdownDTO(campus.getCampusId(), campus.getCampusName()))
                 .collect(Collectors.toList());
     }
- 
+
     public List<GenericDropdownDTO> getZonesByCity(int cityId) {
         return zoneRepo.findByCityCityId(cityId).stream()
                 .map(zone -> new GenericDropdownDTO(zone.getZoneId(), zone.getZoneName()))
                 .collect(Collectors.toList());
     }
- 
+
     public Long getEmployeePhoneNumber(String identifier) {
         com.common.entity.Employee emp = null;
- 
+
         if (identifier != null && !identifier.isBlank()) {
             try {
                 Integer empId = Integer.parseInt(identifier);
@@ -275,12 +277,12 @@ public class CommonServiceMethods {
             } catch (NumberFormatException e) {
                 // Not an integer, skip empId check
             }
- 
+
             if (emp == null) {
                 emp = employeeRepo.findByPayrollId(identifier).orElse(null);
             }
         }
- 
+
         if (emp != null) {
             if (emp.getPrimaryMobileNo() != null) {
                 return emp.getPrimaryMobileNo();
@@ -289,7 +291,7 @@ public class CommonServiceMethods {
         }
         return null;
     }
- 
+
     @Cacheable(value = "campusByOrganization", key = "#orgId")
     public List<GenericDropdownDTO> getCampusByOrganization(Integer orgId) {
         return cmpsOrgRepo.findByOrganizationOrganizationIdAndIsActive(orgId, 1).stream()
@@ -297,16 +299,16 @@ public class CommonServiceMethods {
                         cmpsOrg.getCampus().getCampusName()))
                 .collect(Collectors.toList());
     }
- 
+
     public CampusLocationDTO getLocationByCampusId(int campusId) {
         Campus campus = campusRepo.findById(campusId)
                 .orElseThrow(() -> new RuntimeException("Campus not found with id: " + campusId));
- 
+
         CampusLocationDTO dto = new CampusLocationDTO();
         if (campus.getZone() != null) {
             dto.setZoneId(campus.getZone().getZoneId());
             dto.setZoneName(campus.getZone().getZoneName());
- 
+
             if (campus.getZone().getCity() != null) {
                 dto.setCityId(campus.getZone().getCity().getCityId());
                 dto.setCityName(campus.getZone().getCity().getCityName());
@@ -314,11 +316,12 @@ public class CommonServiceMethods {
         }
         return dto;
     }
-//<<<<<<< HEAD
-// 
-//=======
-//
-//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
+
+    // <<<<<<< HEAD
+    //
+    // =======
+    //
+    // >>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
     public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId) {
         List<com.common.entity.Employee> employees;
         if (designationId != null) {
@@ -327,22 +330,19 @@ public class CommonServiceMethods {
         } else {
             employees = employeeRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, 1);
         }
-//<<<<<<< HEAD
-// 
-//=======
-//
-//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
+
         return employees.stream().map(emp -> new EmployeeDetailsDTO(
                 emp.getEmpId(),
                 emp.getFirstName() + " " + emp.getLastName(),
+                emp.getPayrollId(),
                 emp.getDesignation() != null ? emp.getDesignation().getDesignationId() : null,
                 emp.getDesignation() != null ? emp.getDesignation().getDesignationName() : null,
                 emp.getPrimaryMobileNo(),
                 emp.getEmail())).collect(Collectors.toList());
     }
-//<<<<<<< HEAD
-// 
-//=======
-//
-//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
+    // <<<<<<< HEAD
+    //
+    // =======
+    //
+    // >>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
 }
