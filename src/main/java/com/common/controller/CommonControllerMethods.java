@@ -168,4 +168,13 @@ public class CommonControllerMethods {
         return ResponseEntity.ok(commonServiceMethods.getEmployeesByDeptAndDesig(departmentId, designationId));
     }
  
+    @GetMapping("/departments")
+    public List<GenericDropdownDTO> getAllDepartments() {
+        return commonServiceMethods.getAllDepartments();
+    }
+ 
+    @GetMapping("/designations/{departmentId}")
+    public List<GenericDropdownDTO> getDesignationsByDept(@PathVariable Integer departmentId) {
+        return commonServiceMethods.getDesignationsByDepartment(departmentId);
+    }
 }

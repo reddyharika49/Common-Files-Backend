@@ -32,6 +32,8 @@ import com.common.repository.CampusRepository;
 import com.common.repository.CasteRepository;
 import com.common.repository.CityRepository;
 import com.common.repository.DistrictRepository;
+import com.common.repository.EmpDepartmentRepository;
+import com.common.repository.EmpDesignationRepository;
 import com.common.repository.EmployeeRepository;
 import com.common.repository.EmployeeViewRepository;
 import com.common.repository.GenderRepository;
@@ -84,6 +86,10 @@ public class CommonServiceMethods {
     CampusEmployeeRepository campusEmployeeRepo;
     @Autowired
     CampusRepository campusRepo;
+    @Autowired
+    EmpDepartmentRepository empDeptRepo;
+    @Autowired
+    EmpDesignationRepository empDesigRepo;
  
     final int ACTIVE_STATUS = 1;
  
@@ -340,9 +346,18 @@ public class CommonServiceMethods {
                 emp.getPrimaryMobileNo(),
                 emp.getEmail())).collect(Collectors.toList());
     }
-//<<<<<<< HEAD
-// 
-//=======
-//
-//>>>>>>> 7e31fb97c1938bbfc128665cfb6a49ed68d361e0
+ 
+    @Cacheable(value = "allDepartments")
+    public List<GenericDropdownDTO> getAllDepartments() {
+        return empDeptRepo.findByIsActive(ACTIVE_STATUS).stream()
+                .map(dept -> new GenericDropdownDTO(dept.getDepartmentId(), dept.getDepartmentName()))
+                .collect(Collectors.toList());
+    }
+ 
+    @Cacheable(value = "designationsByDept", key = "#departmentId")
+    public List<GenericDropdownDTO> getDesignationsByDepartment(Integer departmentId) {
+        return empDesigRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, ACTIVE_STATUS).stream()
+                .map(desig -> new GenericDropdownDTO(desig.getDesignationId(), desig.getDesignationName()))
+                .collect(Collectors.toList());
+    }
 }
