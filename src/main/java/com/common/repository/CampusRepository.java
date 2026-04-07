@@ -23,6 +23,13 @@ public interface CampusRepository extends JpaRepository<Campus, Integer> {
             "AND (:businessTypeName IS NULL OR LOWER(c.businessType.businessTypeName) = LOWER(:businessTypeName)) " +
             "AND (:cityId IS NULL OR c.city.cityId = :cityId)")
     List<Campus> findLinkedCampuses(java.util.List<Integer> campusIds, String businessTypeName, Integer cityId);
+
+    @org.springframework.data.jpa.repository.Query("SELECT DISTINCT new com.common.dto.GenericDropdownDTO(c.city.cityId, c.city.cityName) " +
+            "FROM Campus c WHERE c.campusId IN :campusIds " +
+            "AND c.isActive = 1 " +
+            "AND (:businessTypeName IS NULL OR LOWER(c.businessType.businessTypeName) = LOWER(:businessTypeName)) " +
+            "AND c.city IS NOT NULL")
+    List<GenericDropdownDTO> findUniqueCitiesByCampusIds(List<Integer> campusIds, String businessTypeName);
  
     List<Campus> findByBusinessTypeBusinessTypeNameIgnoreCaseAndIsActive(String businessTypeName, Integer isActive);
  

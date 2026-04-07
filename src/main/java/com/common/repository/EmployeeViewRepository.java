@@ -24,4 +24,7 @@ public interface EmployeeViewRepository extends JpaRepository<EmployeeView, Empl
              @Param("designation") String designation,
              @Param("roleNames") List<String> roleNames);
  
+    @Query("SELECT COUNT(e) > 0 FROM EmployeeView e WHERE e.id.empId = :empId AND LOWER(e.roleName) LIKE '%admin%'")
+    boolean existsByEmpIdAndAdminRole(@Param("empId") int empId);
+ 
 }

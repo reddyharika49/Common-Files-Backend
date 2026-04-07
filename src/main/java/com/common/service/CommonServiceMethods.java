@@ -356,40 +356,26 @@ public class CommonServiceMethods {
 
         String busTypeName = (category != null && !category.isBlank()) ? category : null;
 
-        // Admin check — if admin, return all active cities
-        boolean isAdmin = employeeViewRepo.findAllByEmpId(empId).stream()
-                .anyMatch(ev -> ev.getRoleName() != null && ev.getRoleName().toLowerCase().contains("admin"));
-
-        if (isAdmin) {
+        // Optimized admin check
+        if (employeeViewRepo.existsByEmpIdAndAdminRole(empId)) {
             return cityRepo.findByStatus(ACTIVE_STATUS).stream()
                     .map(city -> new GenericDropdownDTO(city.getCityId(), city.getCityName()))
                     .collect(Collectors.toList());
         }
 
-        // Non-admin: collect campus IDs linked to this employee
-        List<Integer> linkedCampusIds = new ArrayList<>();
+        // Optimized campus IDs retrieval: collect both primary and assigned campuses
+        Set<Integer> campusIds = new HashSet<>();
+        Integer primaryCampusId = employeeRepo.findCampusIdByEmpId(empId);
+        if (primaryCampusId != null) {
+            campusIds.add(primaryCampusId);
+        }
+        campusIds.addAll(campusEmployeeRepo.findCampusIdsByEmpId(empId));
 
-        employeeRepo.findById(empId).ifPresent(emp -> {
-            if (emp.getCampus() != null && emp.getCampus().getCampusId() != null) {
-                linkedCampusIds.add(emp.getCampus().getCampusId());
-            }
-        });
-
-        campusEmployeeRepo.findByEmployeeEmpIdAndIsActive(empId, 1).forEach(ce -> {
-            if (ce.getCampus() != null && ce.getCampus().getCampusId() != null) {
-                linkedCampusIds.add(ce.getCampus().getCampusId());
-            }
-        });
-
-        if (linkedCampusIds.isEmpty()) {
+        if (campusIds.isEmpty()) {
             return new ArrayList<>();
         }
 
-        // From linked campuses (filtered by category), extract unique cities
-        return campusRepo.findLinkedCampuses(linkedCampusIds, busTypeName, null).stream()
-                .filter(c -> c.getCity() != null)
-                .map(c -> new GenericDropdownDTO(c.getCity().getCityId(), c.getCity().getCityName()))
-                .distinct()
-                .collect(Collectors.toList());
+        // Optimized city DTO retrieval: single query with projection
+        return campusRepo.findUniqueCitiesByCampusIds(new ArrayList<>(campusIds), busTypeName);
     }
 }
