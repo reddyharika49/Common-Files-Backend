@@ -181,15 +181,17 @@ public class CommonControllerMethods {
     @GetMapping("/employee/cities/{empId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCitiesByEmployee(
             @PathVariable int empId,
-            @RequestParam(required = false) String category) {
-        return ResponseEntity.ok(commonServiceMethods.getCitiesByEmployee(empId, category));
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) Integer stateId) {
+        return ResponseEntity.ok(commonServiceMethods.getCitiesByEmployee(empId, category, stateId));
     }
 
     @GetMapping("/employee/cities/{empId}/count")
     public ResponseEntity<Integer> getCitiesByEmployeeCount(
             @PathVariable int empId,
-            @RequestParam(required = false) String category) {
-        int count = commonServiceMethods.getCitiesByEmployee(empId, category).size();
+            @RequestParam(required = false) String category,
+            @RequestParam(required = false) Integer stateId) {
+        int count = commonServiceMethods.getCitiesByEmployee(empId, category, stateId).size();
         return ResponseEntity.ok(count);
     }
 }

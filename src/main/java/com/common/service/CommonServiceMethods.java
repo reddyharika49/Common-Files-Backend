@@ -352,13 +352,19 @@ public class CommonServiceMethods {
                 .collect(Collectors.toList());
     }
 
-    public List<GenericDropdownDTO> getCitiesByEmployee(int empId, String category) {
+    public List<GenericDropdownDTO> getCitiesByEmployee(int empId, String category, Integer stateId) {
 
         String busTypeName = (category != null && !category.isBlank()) ? category : null;
 
         // Optimized admin check
         if (employeeViewRepo.existsByEmpIdAndAdminRole(empId)) {
-            return cityRepo.findByStatus(ACTIVE_STATUS).stream()
+            List<com.common.entity.City> adminCities;
+            if (stateId != null) {
+                adminCities = cityRepo.findByDistrictStateStateIdAndStatus(stateId, ACTIVE_STATUS);
+            } else {
+                adminCities = cityRepo.findByStatus(ACTIVE_STATUS);
+            }
+            return adminCities.stream()
                     .map(city -> new GenericDropdownDTO(city.getCityId(), city.getCityName()))
                     .collect(Collectors.toList());
         }
@@ -376,6 +382,6 @@ public class CommonServiceMethods {
         }
 
         // Optimized city DTO retrieval: single query with projection
-        return campusRepo.findUniqueCitiesByCampusIds(new ArrayList<>(campusIds), busTypeName);
+        return campusRepo.findUniqueCitiesByCampusIds(new ArrayList<>(campusIds), busTypeName, stateId);
     }
 }

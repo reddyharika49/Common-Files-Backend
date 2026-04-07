@@ -28,8 +28,9 @@ public interface CampusRepository extends JpaRepository<Campus, Integer> {
             "FROM Campus c WHERE c.campusId IN :campusIds " +
             "AND c.isActive = 1 " +
             "AND (:businessTypeName IS NULL OR LOWER(c.businessType.businessTypeName) = LOWER(:businessTypeName)) " +
+            "AND (:stateId IS NULL OR c.state.stateId = :stateId) " +
             "AND c.city IS NOT NULL")
-    List<GenericDropdownDTO> findUniqueCitiesByCampusIds(List<Integer> campusIds, String businessTypeName);
+    List<GenericDropdownDTO> findUniqueCitiesByCampusIds(List<Integer> campusIds, String businessTypeName, Integer stateId);
  
     List<Campus> findByBusinessTypeBusinessTypeNameIgnoreCaseAndIsActive(String businessTypeName, Integer isActive);
  
