@@ -171,6 +171,11 @@ public class CommonServiceMethods {
                 .map(d -> new GenericDropdownDTO(d.getDistrictId(), d.getDistrictName())).collect(Collectors.toList());
     }
 
+    public List<GenericDropdownDTO> getDistrictsByState(int stateId) {
+        return districtRepo.findByStateStateIdAndStatus(stateId, ACTIVE_STATUS).stream()
+                .map(d -> new GenericDropdownDTO(d.getDistrictId(), d.getDistrictName())).collect(Collectors.toList());
+    }
+
     @Cacheable(value = "cities")
     public List<GenericDropdownDTO> getAllCities() {
         return cityRepo.findByStatus(ACTIVE_STATUS).stream()

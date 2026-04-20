@@ -84,6 +84,11 @@ public class CommonControllerMethods {
     public List<GenericDropdownDTO> getAllDistricts() {
         return commonServiceMethods.getAllDistricts();
     }
+
+    @GetMapping("/districts/{stateId}")
+    public ResponseEntity<List<GenericDropdownDTO>> getDistrictsByState(@PathVariable int stateId) {
+        return ResponseEntity.ok(commonServiceMethods.getDistrictsByState(stateId));
+    }
  
     @GetMapping("/cities")
     public List<GenericDropdownDTO> getCities() {

@@ -16,7 +16,6 @@ import javax.crypto.SecretKey;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -25,7 +24,7 @@ import jakarta.annotation.PostConstruct;
 @Service
 public class JwtService {
 
-    @Value("${jwt.secret:}")         // Base64 preferred; raw allowed
+    @Value("${jwt.secret:}") // Base64 preferred; raw allowed
     private String configuredSecret;
 
     @Value("${jwt.exp.minutes:60}")
@@ -64,22 +63,21 @@ public class JwtService {
 
         var builder = Jwts.builder()
                 .id(UUID.randomUUID().toString()) // jti
-                .subject(subject)               // sub
+                .subject(subject) // sub
                 .issuedAt(Date.from(now))
                 .expiration(Date.from(exp));
-        
+
         if (extraClaims != null && !extraClaims.isEmpty()) {
             builder.claims(extraClaims);
         }
-        
+
         return builder.signWith(key).compact();
     }
-
 
     /** This is your core parsing method. */
     public Claims parseClaims(String jwt) {
         return Jwts.parser()
-                .verifyWith(key)           // 0.12.x API
+                .verifyWith(key) // 0.12.x API
                 .build()
                 .parseSignedClaims(jwt)
                 .getPayload();
@@ -125,7 +123,7 @@ public class JwtService {
         // JWT libraries decode JSON arrays into Java Lists
         return parseClaims(token).get("authorized_roles", List.class);
     }
-    
+
     /**
      * Extracts the "authorized_designations" claim from the token.
      */
