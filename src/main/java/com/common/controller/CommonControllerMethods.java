@@ -17,6 +17,7 @@ import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
 import com.common.dto.CampusLocationDTO;
 import com.common.dto.EmployeeDetailsDTO;
+import com.common.dto.EmployeeMainCampusDTO;
 import com.common.entity.AcademicYear;
 import com.common.entity.City;
 import com.common.service.CommonServiceMethods;
@@ -84,7 +85,7 @@ public class CommonControllerMethods {
     public List<GenericDropdownDTO> getAllDistricts() {
         return commonServiceMethods.getAllDistricts();
     }
-
+ 
     @GetMapping("/districts/{stateId}")
     public ResponseEntity<List<GenericDropdownDTO>> getDistrictsByState(@PathVariable int stateId) {
         return ResponseEntity.ok(commonServiceMethods.getDistrictsByState(stateId));
@@ -146,7 +147,7 @@ public class CommonControllerMethods {
     public ResponseEntity<List<GenericDropdownDTO>> getZonesByCity(@PathVariable int cityId) {
         return ResponseEntity.ok(commonServiceMethods.getZonesByCity(cityId));
     }
-   
+    
     @GetMapping("/employee/phone")
     public ResponseEntity<?> getEmployeePhoneNumber(
             @RequestParam String identifier) {
@@ -156,7 +157,7 @@ public class CommonControllerMethods {
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Employee or phone number not found");
     }
-   
+    
     @GetMapping("/campusByOrganizations/{orgId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCampusByOrganizations(@PathVariable Integer orgId){
         return ResponseEntity.ok(commonServiceMethods.getCampusByOrganization(orgId));
@@ -169,8 +170,9 @@ public class CommonControllerMethods {
     @GetMapping("/employees/dept/{departmentId}")
     public ResponseEntity<List<EmployeeDetailsDTO>> getEmployeesByDeptAndDesig(
             @PathVariable Integer departmentId,
-            @RequestParam(required = false) Integer designationId) {
-        return ResponseEntity.ok(commonServiceMethods.getEmployeesByDeptAndDesig(departmentId, designationId));
+            @RequestParam(required = false) Integer designationId,
+            @RequestParam(required = false) Integer campusId) {
+        return ResponseEntity.ok(commonServiceMethods.getEmployeesByDeptAndDesig(departmentId, designationId, campusId));
     }
  
     @GetMapping("/departments")
@@ -182,7 +184,7 @@ public class CommonControllerMethods {
     public List<GenericDropdownDTO> getDesignationsByDept(@PathVariable Integer departmentId) {
         return commonServiceMethods.getDesignationsByDepartment(departmentId);
     }
-
+ 
     @GetMapping("/employee/cities/{empId}")
     public ResponseEntity<List<GenericDropdownDTO>> getCitiesByEmployee(
             @PathVariable int empId,
@@ -190,7 +192,7 @@ public class CommonControllerMethods {
             @RequestParam(required = false) Integer stateId) {
         return ResponseEntity.ok(commonServiceMethods.getCitiesByEmployee(empId, category, stateId));
     }
-
+ 
     @GetMapping("/employee/cities/{empId}/count")
     public ResponseEntity<Integer> getCitiesByEmployeeCount(
             @PathVariable int empId,
@@ -198,5 +200,10 @@ public class CommonControllerMethods {
             @RequestParam(required = false) Integer stateId) {
         int count = commonServiceMethods.getCitiesByEmployee(empId, category, stateId).size();
         return ResponseEntity.ok(count);
+    }
+ 
+    @GetMapping("/employee/main-campus/{empId}")
+    public ResponseEntity<EmployeeMainCampusDTO> getMainCampusDetailsByEmpId(@PathVariable int empId) {
+        return ResponseEntity.ok(commonServiceMethods.getMainCampusDetailsByEmpId(empId));
     }
 }

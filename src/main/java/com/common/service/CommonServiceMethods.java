@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import com.common.dto.CampusLocationDTO;
 import com.common.dto.EmployeeDetailsDTO;
+import com.common.dto.EmployeeMainCampusDTO;
 import com.common.dto.EmployeePayrollDto;
 import com.common.dto.GenericDropdownDTO;
 import com.common.dto.PinCodeLocationDTO;
@@ -324,11 +325,16 @@ public class CommonServiceMethods {
         return dto;
     }
 
-    public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId) {
+    public List<EmployeeDetailsDTO> getEmployeesByDeptAndDesig(Integer departmentId, Integer designationId, Integer campusId) {
         List<com.common.entity.Employee> employees;
-        if (designationId != null) {
+        if (designationId != null && campusId != null) {
+            employees = employeeRepo.findByDepartmentDepartmentIdAndDesignationDesignationIdAndCampusCampusIdAndIsActive(departmentId,
+                    designationId, campusId, 1);
+        } else if (designationId != null) {
             employees = employeeRepo.findByDepartmentDepartmentIdAndDesignationDesignationIdAndIsActive(departmentId,
                     designationId, 1);
+        } else if (campusId != null) {
+            employees = employeeRepo.findByDepartmentDepartmentIdAndCampusCampusIdAndIsActive(departmentId, campusId, 1);
         } else {
             employees = employeeRepo.findByDepartmentDepartmentIdAndIsActive(departmentId, 1);
         }
@@ -340,7 +346,9 @@ public class CommonServiceMethods {
                 emp.getDesignation() != null ? emp.getDesignation().getDesignationId() : null,
                 emp.getDesignation() != null ? emp.getDesignation().getDesignationName() : null,
                 emp.getPrimaryMobileNo(),
-                emp.getEmail())).collect(Collectors.toList());
+                emp.getEmail(),
+                emp.getCampus() != null ? emp.getCampus().getCampusId() : null,
+                emp.getCampus() != null ? emp.getCampus().getCampusName() : null)).collect(Collectors.toList());
     }
 
     @Cacheable(value = "allDepartments")
@@ -388,5 +396,42 @@ public class CommonServiceMethods {
 
         // Optimized city DTO retrieval: single query with projection
         return campusRepo.findUniqueCitiesByCampusIds(new ArrayList<>(campusIds), busTypeName, stateId);
+    }
+
+    public EmployeeMainCampusDTO getMainCampusDetailsByEmpId(int empId) {
+        com.common.entity.Employee emp = employeeRepo.findById(empId)
+                .orElseThrow(() -> new RuntimeException("Employee not found with id: " + empId));
+
+        Campus campus = emp.getCampus();
+        if (campus == null) {
+            throw new RuntimeException("Main campus not mapped for employee: " + empId);
+        }
+
+        EmployeeMainCampusDTO dto = new EmployeeMainCampusDTO();
+        dto.setCampusId(campus.getCampusId());
+        dto.setCampusName(campus.getCampusName());
+
+        if (campus.getCity() != null) {
+            dto.setCityId(campus.getCity().getCityId());
+            dto.setCityName(campus.getCity().getCityName());
+
+            if (campus.getCity().getDistrict() != null) {
+                dto.setDistrictId(campus.getCity().getDistrict().getDistrictId());
+                dto.setDistrictName(campus.getCity().getDistrict().getDistrictName());
+
+                if (campus.getCity().getDistrict().getState() != null) {
+                    dto.setStateId(campus.getCity().getDistrict().getState().getStateId());
+                    dto.setStateName(campus.getCity().getDistrict().getState().getStateName());
+                }
+            }
+        }
+
+        // Fallback for state if city/district traversal fails but direct state exists
+        if (dto.getStateId() == null && campus.getState() != null) {
+            dto.setStateId(campus.getState().getStateId());
+            dto.setStateName(campus.getState().getStateName());
+        }
+
+        return dto;
     }
 }
