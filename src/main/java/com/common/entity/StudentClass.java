@@ -17,6 +17,11 @@ public class StudentClass {
     @Column(name = "class_name")
     private String className;
     
+    @Column(name = "display_name")
+    private String displayName;
+    
     @Column(name = "is_active") 
     private int isActive;
+    
+    
 }
